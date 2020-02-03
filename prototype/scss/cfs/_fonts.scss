@@ -1,0 +1,38 @@
+
+@mixin font-face-regular($font) {
+  @font-face {
+    font-family: '#{$font}';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/#{$font}/#{$font}-regular.ttf') format('truetype');
+  }
+}
+
+@mixin font-face-bold($font) {
+  @font-face {
+    font-family: '#{$font}';
+    font-weight: bold;
+    src: url('../fonts/#{$font}/#{$font}-bold.ttf') format('truetype');
+  }  
+}
+
+@mixin font-face-semibold($font) {
+  @font-face {
+    font-family: '#{$font}';
+    font-weight: bold;
+    src: url('../fonts/#{$font}/#{$font}-semibold.ttf') format('truetype');
+  }  
+}
+
+@mixin font-face-thin($font) {
+  @font-face {
+    font-family: '#{$font}';
+    font-weight: bold;
+    src: url('../fonts/#{$font}/#{$font}-thin.ttf') format('truetype');
+  }  
+}
+
+$font: 'oxygen';
+@include font-face-regular($font);
+@include font-face-bold($font);
+

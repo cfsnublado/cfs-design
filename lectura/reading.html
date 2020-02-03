@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>
+Home | Prototype
+</title>
+
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/fontawesome-all.css" />
+
+<style>
+
+
+</style>
+
+</head>
+<body>
+
+<div id="app-container">
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+<div class="navbar-brand">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="navbar-sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/cfs-logo.png" alt="cfs-logo">
+</a>
+
+</div>
+
+<div 
+id="navbar-menu" 
+class="navbar-menu"
+ref="navbarMenu"
+>
+
+<div class="navbar-end">
+
+<a class="navbar-item">
+Login
+</a>
+
+</div><!-- navbar-end -->
+
+</div><!-- navbar-menu -->
+
+</nav>
+
+<!-- sidebar -->
+<div id="sidebar-background" class="sidebar-background" @click="toggleSidebar(false)"></div>
+
+<div
+id="sidebar"
+class="sidebar"
+ref="sidebar"
+>
+<div class="sidebar-container">
+
+<div class="sidebar-navbar">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/cfs-logo.png" alt="cfs-logo">
+</a>
+
+</div>
+
+<div class="sidebar-body">
+
+<div class="menu">
+
+<p class="menu-label">
+General
+</p>
+
+<ul class="menu-list">
+<li>
+<a><i class="fas fa-fw fa-home menu-icon"></i> Home</a>
+</li>
+<li>
+<a><i class="fas fa-fw fa-language menu-icon"></i> Settings</a>
+</li>
+</ul>
+
+</div>
+
+</div><!-- end sidebar-body -->
+
+<div class="sidebar-footer">
+</div>
+
+</div>
+</div><!-- end sidebar -->
+
+<section class="section entry-view-section">
+<div class="container">
+
+<div class="columns">
+<div class="column is-10 is-offset-1">
+
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Medio rey</a></li>
+    <li><a href="#">Readings</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Medio Rey: Sinopsis</a></li>
+  </ul>
+</nav>
+
+<div class="reading-view">
+
+<div class="reading-name">
+<h2>Medio Rey: Sinopsis</h2>
+</div>
+
+<div class="reading-content">
+<blockquote>
+  <p>Juré vengarme de los asesinos de mi padre. Seré medio hombre, pero pronuncié un juramento entero.</p>
+</blockquote>
+
+<p>Yarvi, el hijo menor del rey, nació con una malformación en una mano que ha llevado a todo el mundo, incluso a su propio padre, a considerarlo «medio hombre». Por eso, en lugar de formarse como guerrero, al igual que el resto de varones de su estirpe, se ha dedicado a estudiar para convertirse en uno de los clérigos del reino. Sin embargo, en la víspera de la última prueba para ingresar en esta poderosa orden de sabios, a Yarvi le llega la noticia de que su padre y su hermano han sido asesinados. </p>
+
+<p>Él es el nuevo rey.</p>
+
+<p>Pero tras una terrible traición a <strong>manos</strong> de sus seres queridos, Yarvi se encontrará solo en un mundo regido por la fuerza física y los corazones fríos. Incapaz de llevar armadura o de levantar un hacha, deberá afilar y agudizar su mente. Cuando se juntan a su alrededor una extraña hermandad de almas perdidas, descubrirá que esos compañeros inesperados tal vez puedan ayudarle a convertirse en el hombre que quiere ser.</p>
+
+</div>
+
+</div><!-- entry-view -->
+
+</div>
+</div>
+
+</div>
+</section>
+
+</div><!-- end app-container -->
+
+<script>
+var sidebarExpanded = false;
+</script>
+
+<script src="js/axios.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/vue/plugins/modal.js"></script>
+<script src="js/vue/core-components.js"></script>
+<script src="js/vue/app-components.js"></script>
+<script src="js/vue/reading-components.js"></script>
+<script src="js/vue/dbx-components.js"></script>
+<script src="js/vue/directives/vue-scrollto.js"></script>
+<script src="js/vue/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>
+Home | Prototype
+</title>
+
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/fontawesome-all.css" />
+
+</head>
+<body>
+
+<div id="app-container">
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+<div class="navbar-brand">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="navbar-sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/cfs-logo.png" alt="cfs-logo">
+</a>
+
+</div>
+
+<div 
+id="navbar-menu" 
+class="navbar-menu"
+ref="navbarMenu"
+>
+
+
+<div class="navbar-end">
+
+<a class="navbar-item">
+Login
+</a>
+
+</div><!-- navbar-end -->
+
+</div><!-- navbar-menu -->
+
+</nav>
+
+<!-- sidebar -->
+<div id="sidebar-background" class="sidebar-background" @click="toggleSidebar(false)"></div>
+
+<div
+id="sidebar"
+class="sidebar"
+ref="sidebar"
+>
+<div class="sidebar-container">
+
+<div class="sidebar-navbar">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/cfs-logo.png" alt="cfs-logo">
+</a>
+
+</div>
+
+<div class="sidebar-body">
+
+<div class="menu">
+
+<p class="menu-label">
+General
+</p>
+
+<ul class="menu-list">
+<li>
+<a><i class="fas fa-fw fa-home menu-icon"></i> Home</a>
+</li>
+<li>
+<a><i class="fas fa-fw fa-language menu-icon"></i> Settings</a>
+</li>
+</ul>
+
+</div>
+
+</div><!-- end sidebar-body -->
+
+<div class="sidebar-footer">
+</div>
+
+</div>
+</div><!-- end sidebar -->
+
+<section class="section">
+<div class="container">
+
+<div class="columns">
+<div class="column is-12">
+
+<!--
+<audio-player
+audio-file="https://www.dropbox.com/s/3di40f872jdfrb5/mediorey.mp3?dl=1"
+>
+</audio-player>
+-->
+
+<audio-player
+audio-player-id="audio-player-2"
+audio-file="https://www.dropbox.com/s/3di40f872jdfrb5/mediorey.mp3?dl=1"
+:has-mute-btn="false"
+:has-loop-btn="false"
+:has-download-btn="false"
+>
+</audio-player>
+
+</div>
+</div>
+
+</div>
+</section>
+
+</div><!-- end app-container -->
+
+<script>
+var sidebarExpanded = false;
+</script>
+
+<script src="js/axios.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/vue/plugins/modal.js"></script>
+<script src="js/vue/core-components.js"></script>
+<script src="js/vue/app-components.js"></script>
+<script src="js/vue/reading-components.js"></script>
+<script src="js/vue/dbx-components.js"></script>
+<script src="js/vue/directives/vue-scrollto.js"></script>
+<script src="js/vue/app.js"></script>
+
+</body>
+</html>

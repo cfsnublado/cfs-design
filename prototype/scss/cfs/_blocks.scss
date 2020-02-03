@@ -1,0 +1,51 @@
+$icon-font-size-px: 60px;
+$icon-block-link-color: #818a91;
+$icon-block-link-hover-color: #373A3C;
+$icon-block-border-color: #eaeaea;
+$icon-block-header-font-size: 2rem;
+$icon-blocks-header-font-size: 3rem;
+
+.icon-blocks {
+  .icon-blocks-header {
+    font-size: $icon-blocks-header-font-size;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+  }
+}
+
+.icon-block {
+  padding-top: rem-calc(30px);
+  padding-bottom: rem-calc(30px);
+
+  text-align: center;
+
+  a {
+    color: $icon-block-link-color;
+
+    &:hover {
+      color: $icon-block-link-hover-color;
+    }
+  }
+
+  .icon-block-icon {
+    font-size: rem-calc($icon-font-size-px);
+  }
+
+  .icon-block-header {
+    font-size: $icon-block-header-font-size;
+  }
+}
+
+@include until($tablet) {
+  .icon-blocks {
+    .icon-blocks-header {
+      font-size: 2rem;
+    }
+  }
+
+  .icon-block:not(:last-of-type) {
+    border-bottom: 1px solid $icon-block-border-color;
+  }
+}

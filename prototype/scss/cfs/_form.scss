@@ -1,0 +1,25 @@
+.errorlist {
+  margin-top: rem-calc(4px);
+  margin-left: 0;
+  padding-left: 0;
+
+  list-style: none;
+
+  li {
+    font-size: rem-calc(14px);
+
+    color: $danger;
+  }
+}
+
+.form-error {
+  font-weight: bold;
+
+  color: $danger;
+}
+
+.error {
+  font-size: rem-calc(14px);
+
+  color: $danger;
+}

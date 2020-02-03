@@ -1,0 +1,29 @@
+
+.parallax-block {
+  padding: rem-calc(180px 0 500px 0);
+
+  background-attachment: fixed;
+  background-size: cover;
+
+  .parallax-body {
+    padding-right: rem-calc(18px);
+    padding-left: rem-calc(18px);
+
+    text-align: center;
+  }
+
+  &.intro {
+    color: #fff;
+    background-image: url($parallax-intro-img);
+
+    h1 {
+      margin-bottom: rem-calc(15px);
+    }
+  }
+}
+
+@include until($tablet) {
+  .parallax-block {
+    padding: rem-calc(150px 0 400px 0);
+  }
+}

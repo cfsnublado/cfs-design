@@ -1,0 +1,33 @@
+$page-section-border-color: #eaeaea;
+
+.page-section-header {
+  font-size: 3rem;
+
+  text-align: center;
+}
+
+.page-section:not(:last-of-type) {
+  border-bottom: 1px solid $page-section-border-color;
+}
+
+// Specific page sections
+
+.random-word-section {
+  .random-word {
+    font-size: 3rem;
+
+    text-align: center;
+  }
+}
+
+@include until($tablet) {
+  .page-section-header {
+    font-size: 2rem;
+  }
+
+  .random-word-section {
+    .random-word {
+      font-size: rem-calc(26px);
+    }
+  }
+}

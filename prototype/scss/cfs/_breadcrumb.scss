@@ -1,0 +1,15 @@
+.breadcrumb {
+  font-size: rem-calc(16px);
+
+  li {
+    & + li::before {
+      content: ">";
+    }
+  }
+}
+
+@include until($tablet) {
+  .breadcrumb {
+    display: none;
+  }
+}

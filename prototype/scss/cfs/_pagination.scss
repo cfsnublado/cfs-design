@@ -1,0 +1,321 @@
+*,
+*::after,
+*::before {
+  @include box-sizing(border-box);
+}
+
+nav[role='navigation'] {
+  text-align: center;
+}
+
+.cd-pagination {
+  width: 90%;
+  max-width: 1000px;
+  margin-top: rem-calc(20px);
+
+  text-align: center;
+
+  li {
+    /* hide numbers on small devices */
+    display: inline-block;
+
+    margin: 0 0.2em;
+
+    background-color: $pagination-color-3;
+
+    &.button {
+      /* make sure prev next buttons are visible */
+      display: inline-block;
+    }
+  }
+
+  a,
+  span {
+    @include user-select(none);
+
+    display: inline-block;
+
+    font-size: rem-calc(14px);
+    /* use padding and font-size to change buttons size */
+
+    padding: 0.4em 1em;
+  }
+
+  a {
+    text-decoration: none;
+
+    color: $pagination-color-1;
+    border: 1px solid darken($pagination-color-3, 10%);
+    border-radius: $pagination-border-radius;
+
+    &:hover {
+      background-color: darken($pagination-color-3, 5%);
+    }
+
+    &:active {
+      /* click effect */
+      @include transform(scale(0.9));
+    }
+
+    &.disabled {
+      pointer-events: none;
+      /* button disabled */
+
+      color: rgba($pagination-color-1, 0.4);
+
+      &::before,
+      &::after {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .button:first-of-type a::before {
+    content: '\00ab  ';
+  }
+
+  .button:last-of-type a::after {
+    content: ' \00bb';
+  }
+
+  .current {
+    pointer-events: none;
+
+    color: $pagination-color-3;
+    border-color: $pagination-color-2;
+    /* selected number */
+    background-color: $pagination-color-2;
+  }
+}
+
+.cd-pagination.no-space {
+  @include clearfix;
+
+  display: inline-block;
+
+  width: auto;
+  max-width: none;
+
+  border: 1px solid darken($pagination-color-3, 10%);
+  border-radius: $pagination-border-radius;
+
+  li {
+    float: left;
+
+    margin: 0;
+
+    border-right: 1px solid darken($pagination-color-3, 10%);
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+
+  a,
+  span {
+    float: left;
+
+    padding: 0.8em 1em;
+
+    border: none;
+    border-radius: 0;
+  }
+
+  li:first-of-type a {
+    border-radius: $pagination-border-radius 0 0 $pagination-border-radius;
+  }
+
+  li:last-of-type a {
+    border-radius: 0 $pagination-border-radius $pagination-border-radius 0;
+  }
+}
+
+/* -------------------------------- 
+
+move buttons - move prev and next buttons to the sides
+
+-------------------------------- */
+
+.cd-pagination.move-buttons {
+  @include clearfix;
+
+  .button:first-of-type {
+    float: left;
+  }
+
+  .button:last-of-type {
+    float: right;
+  }
+}
+
+.cd-pagination.no-space.move-buttons {
+  display: block;
+  overflow: hidden;
+
+  width: 90%;
+  max-width: 1000px;
+
+  li {
+    float: none;
+
+    border: none;
+  }
+
+  a,
+  span {
+    float: none;
+  }
+}
+
+/* -------------------------------- 
+
+custom icons - customize the small arrow inside the next and prev buttons 
+
+-------------------------------- */
+
+.cd-pagination.custom-icons {
+  .button a {
+    position: relative;
+  }
+
+  .button:first-of-type a {
+    padding-left: 2.4em;
+  }
+
+  .button:last-of-type a {
+    padding-right: 2.4em;
+  }
+
+  .button:first-of-type a::before,
+  .button:last-of-type a::after {
+    display: inline-block;
+
+    position: absolute;
+    top: 50%;
+    /* set size for custom icons */
+
+    width: 16px;
+    height: 16px;
+    /* set margin-top = icon height/2 */
+    margin-top: -8px;
+
+    content: '';
+  }
+
+  .button:first-of-type a::before {
+    left: 0.8em;
+  }
+
+  .button:last-of-type a::after {
+    @include transform(rotate(180deg));
+
+    right: 0.8em;
+  }
+}
+
+/* -------------------------------- 
+
+custom buttons - replace prev and next buttons text with a custom icon 
+
+-------------------------------- */
+
+.cd-pagination.custom-buttons {
+  a,
+  span {
+    vertical-align: middle;
+  }
+
+  .button a {
+    /* image replacement */
+    overflow: hidden;
+    /* set custom width */
+
+    width: 40px;
+
+    white-space: nowrap;
+    text-indent: 100%;
+
+    color: transparent;
+  }
+
+  .button:last-of-type a {
+    @include transform(rotate(180deg));
+
+    .no-touch &:active {
+      @include transform(scale(0.9) rotate(180deg));
+    }
+  }
+}
+
+.cd-pagination.no-space.custom-buttons {
+  .button:last-of-type a {
+    border-radius: $pagination-border-radius 0 0 $pagination-border-radius;
+  }
+}
+
+/* -------------------------------- 
+
+animated buttons - animate the text inside prev and next buttons 
+
+-------------------------------- */
+
+.cd-pagination.animated-buttons {
+  a,
+  span {
+    overflow: hidden;
+
+    line-height: 50px;
+
+    height: 50px;
+    padding: 0 1.4em;
+  }
+
+  .button a {
+    position: relative;
+
+    padding: 0 2em;
+  }
+
+  .button:first-of-type a::before,
+  .button:last-of-type a::after {
+    @include transform(translateX(-50%));
+    @include transition(transform 0.3s);
+
+    right: auto;
+    left: 50%;
+  }
+
+  .button:last-of-type a::after {
+    @include transform(translateX(-50%) rotate(180deg));
+  }
+
+  i {
+    @include transform(translateY(100%));
+    @include transition(transform 0.3s);
+
+    display: block;
+
+    height: 100%;
+  }
+}
+
+.no-touch .cd-pagination.animated-buttons .button a:hover i {
+  @include transform(translateY(0));
+}
+
+.no-touch .cd-pagination.animated-buttons .button:first-of-type a:hover::before {
+  @include transform(translateX(-50%) translateY(-50px));
+}
+
+.no-touch .cd-pagination.animated-buttons .button:last-of-type a:hover::after {
+  @include transform(translateX(-50%) rotate(180deg) translateY(50px));
+}
+
+
+@include until($tablet) {
+  .cd-pagination {
+    li.page-num {
+      display: none;
+    }
+  }
+}

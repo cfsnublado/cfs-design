@@ -1,0 +1,46 @@
+$blockquote-base-font-size: rem-calc(34px);
+$blockquote-base-line-height: rem-calc(54px);
+$blockquote-color: hsl(200, 40, 10);
+
+p {
+  margin-top: rem-calc(16px);
+  margin-bottom: rem-calc(16px);
+}
+
+blockquote {
+  color: #888;
+  font-size: $blockquote-base-font-size;
+  font-weight: 100;
+  line-height: $blockquote-base-line-height;
+
+  position: relative;
+
+  margin-bottom: rem-calc(40px);
+  margin-top: rem-calc(40px);
+  padding-left: rem-calc(20px);
+
+  border-left: 4px solid;
+
+  &:before,
+  &:after {
+
+    content: '\201C';
+  }
+
+  &:after {
+    content: '\201D';
+  }
+
+  p {
+    display: inline;
+  }
+}
+
+@include until($tablet) {
+
+  blockquote {
+    font-size: rem-calc(24px);
+    line-height: rem-calc(38px);
+  }
+
+}

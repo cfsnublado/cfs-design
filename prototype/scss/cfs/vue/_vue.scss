@@ -1,0 +1,20 @@
+[v-cloak] {
+  display: none;
+}
+
+.fade-transition-enter,
+.fade-transition-slow-enter,
+.fade-transition-leave-active,
+.fade-transition-slow-leave-active {
+  opacity: 0;
+}
+
+.fade-transition-enter-active,
+.fade-transition-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-transition-slow-enter-active,
+.fade-transition-slow-leave-active {
+  transition: opacity 1.0s ease;
+}

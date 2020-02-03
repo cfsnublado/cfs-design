@@ -1,0 +1,106 @@
+// Styling from https://vuejsexamples.com/html5-basic-audio-player-with-vue-js/
+
+$audio-player-bg: #fff;
+$audio-player-border-color: darken($audio-player-bg, 12%);
+$audio-player-link-color: darken($audio-player-bg, 75%);
+$audio-player-progress-color: $audio-player-border-color;
+$audio-player-seeker-color: $audio-player-link-color;
+$audio-player-text-color: $audio-player-link-color;
+
+.audio-player-wrapper {
+  display: flex;
+
+  height: 100vh;
+
+  background-color: $audio-player-bg;
+  background-image: linear-gradient(90deg, #fff 0, darken(#fff, 12%));
+
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-player {
+  display: inline-block;
+
+  line-height: 1.5625;
+
+  color: $audio-player-text-color;
+  border: 1px solid $audio-player-border-color;
+  border-radius: 5px;
+  background-color: $audio-player-bg;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+
+  &.is-loading {
+    border: none;
+    box-shadow: none;
+  }
+
+  .loading-icon {
+    font-size: 30px;
+
+    colcor: #666;
+  }
+}
+
+.audio-player-controls {
+  display: flex;
+
+   > div.player-control {
+    border-right: 1px solid $audio-player-border-color;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      display: block;
+
+      line-height: 0;
+
+      padding: 1em;
+
+      text-decoration: none;
+
+      color: $audio-player-link-color;
+    }
+  }
+}
+
+.audio-player-progress {
+  position: relative;
+
+  min-width: 200px;
+  height: 50%;
+
+  cursor: pointer;
+
+  background-color: $audio-player-progress-color;
+
+  .audio-player-seeker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $audio-player-seeker-color;
+  }
+}
+
+.audio-player-time {
+  display: flex;
+  // font-size: 18px;
+
+  justify-content: space-between;
+
+  .audio-player-time-current {
+    font-weight: 700;
+
+    padding-left: 5px;
+  }
+
+  .audio-player-time-total {
+    padding-right: 5px;
+
+    opacity: 0.5;
+  }
+}

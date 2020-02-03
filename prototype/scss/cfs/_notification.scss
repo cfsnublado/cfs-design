@@ -1,0 +1,9 @@
+.notification {
+  &.msg-notification {
+    position: absolute;
+    z-index: $msg-notification-z-index;
+
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,38 @@
+.confirmation-modal {
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-header {
+    font-size: rem-calc(34px);
+
+    text-align: center;
+  }
+
+  .modal-body {
+    padding-top: rem-calc(20px);
+    padding-bottom: rem-calc(20px);
+
+    text-align: center;
+  }
+
+  .modal-footer {
+    text-align: center;
+
+    .confirmation-buttons {
+      .button {
+        margin-right: rem-calc(5px);
+        margin-left: rem-calc(5px);
+      }
+    }
+  }
+}
+
+@include until($tablet) {
+  .confirmation-modal {
+    .modal-header {
+      font-size: rem-calc(28px);
+    }
+  }
+}

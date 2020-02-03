@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>
+Home | Prototype
+</title>
+
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/fontawesome-all.css" />
+
+<style>
+
+.project-card .name p {
+  
+}
+
+.project-card .card-controls .control {
+  padding-left: 4px;
+}
+
+.project-card .card-controls .control a {
+  font-size: 18px;
+
+  color: rgba(10, 10, 10, 0.2);
+}
+
+.project-card .card-controls .control a:hover {
+
+  color: rgba(10, 10, 10, 0.3);
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="app-container">
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+<div class="navbar-brand">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="navbar-sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/cfs-logo.png" alt="cfs-logo">
+</a>
+
+</div>
+
+<div 
+id="navbar-menu" 
+class="navbar-menu"
+ref="navbarMenu"
+>
+
+
+<div class="navbar-end">
+
+<a class="navbar-item">
+Login
+</a>
+
+</div><!-- navbar-end -->
+
+</div><!-- navbar-menu -->
+
+</nav>
+
+<!-- sidebar -->
+<div id="sidebar-background" class="sidebar-background" @click="toggleSidebar(false)"></div>
+
+<div
+id="sidebar"
+class="sidebar"
+ref="sidebar"
+>
+<div class="sidebar-container">
+
+<div class="sidebar-navbar">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/cfs-logo.png" alt="cfs-logo">
+</a>
+
+</div>
+
+<div class="sidebar-body">
+
+<div class="menu">
+
+<p class="menu-label">
+General
+</p>
+
+<ul class="menu-list">
+<li>
+<a><i class="fas fa-fw fa-home menu-icon"></i> Home</a>
+</li>
+<li>
+<a><i class="fas fa-fw fa-language menu-icon"></i> Settings</a>
+</li>
+</ul>
+
+</div>
+
+</div><!-- end sidebar-body -->
+
+<div class="sidebar-footer">
+</div>
+
+</div>
+</div><!-- end sidebar -->
+
+<section class="section">
+<div class="container">
+
+<div class="columns is-multiline">
+<div class="column is-6 is-offset-3">
+
+<div class="card project-card">
+
+<div class="card-controls">
+
+<span class="control">
+<a href="">
+<i class="fas fa-edit fa-fw"></i>
+</a>
+</span>
+
+<span class="control">
+<a href="">
+<i class="fas fa-times-circle fa-fw"></i>
+</a>
+</span>
+
+</div>
+
+<div class="card-content">
+
+<a
+href="#"
+class="name"
+>
+<p>
+Medio Rey
+</p>
+</a>
+
+<div 
+class="desc"
+>
+<p>
+El primer libro de la trilogía El mar quebrado, de Joe Abercrombie
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+</div><!-- end app-container -->
+
+<script>
+var sidebarExpanded = false;
+</script>
+
+<script src="js/axios.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/vue/plugins/modal.js"></script>
+<script src="js/vue/core-components.js"></script>
+<script src="js/vue/app-components.js"></script>
+<script src="js/vue/reading-components.js"></script>
+<script src="js/vue/dbx-components.js"></script>
+<script src="js/vue/directives/vue-scrollto.js"></script>
+<script src="js/vue/app.js"></script>
+
+</body>
+</html>

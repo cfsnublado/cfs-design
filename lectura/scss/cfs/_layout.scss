@@ -1,0 +1,49 @@
+.centerall {
+  display: flex;
+
+  height: 100vh;
+  padding: 0;
+
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  padding-top: $main-content-padding-top;
+}
+
+.page-footer {
+  display: flex;
+
+  width: 100%;
+  height: $page-footer-height;
+
+  background-color: $page-footer-background-color;
+  color: $page-footer-text-color;
+
+  align-items: center;
+  justify-content: center;
+
+  &.is-fixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: auto;
+  }
+
+  &.is-absolute {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: auto;
+  }
+
+  &.is-bordered {
+    border-top: 1px solid $page-footer-border-color;
+  }
+}

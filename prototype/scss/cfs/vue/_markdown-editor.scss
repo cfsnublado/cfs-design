@@ -1,0 +1,25 @@
+$highlighted-text-color: #e0eee8;
+$view-font-size-px: 18px;
+
+.markdown-editor {
+  .view-box {
+    .view-text {
+      font-size: rem-calc($view-font-size-px);
+
+      .tagged-text {
+        padding: 5px 0;
+
+        background-color: $highlighted-text-color;
+      }
+    }
+  }
+}
+
+.markdown-editor-controls {
+  display: flex;
+  justify-content: space-between;
+
+  .controls-left {}
+
+  .controls-right {}
+}

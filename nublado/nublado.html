@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>
+Home | Nublado
+</title>
+
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/fontawesome-all.css" />
+
+</head>
+<body>
+
+<div id="app-container">
+
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+
+<div class="navbar-brand">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="navbar-sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/nublado-logo-sm.png" alt="nublado-logo">
+</a>
+
+</div>
+
+<div 
+id="navbar-menu" 
+class="navbar-menu"
+ref="navbarMenu"
+>
+
+
+<div class="navbar-end">
+
+<a class="navbar-item">
+Login
+</a>
+
+</div><!-- navbar-end -->
+
+</div><!-- navbar-menu -->
+
+</nav>
+
+<!-- sidebar -->
+<div id="sidebar-background" class="sidebar-background" @click="toggleSidebar(false)"></div>
+
+<div
+id="sidebar"
+class="sidebar"
+ref="sidebar"
+>
+<div class="sidebar-container">
+
+<div class="sidebar-navbar">
+
+<a 
+role="button" 
+class="sidebar-trigger" 
+aria-label="sidebar-trigger" 
+@click.prevent="toggleSidebar"
+>
+<span></span>
+<span></span>
+<span></span>
+</a>
+
+<a class="navbar-item">
+<img src="images/nublado-logo-sm.png" alt="nublado-logo">
+</a>
+
+</div>
+
+<div class="sidebar-body">
+
+<div class="menu">
+
+<p class="menu-label">
+General
+</p>
+
+<ul class="menu-list">
+<li>
+<a><i class="fas fa-fw fa-book menu-icon"></i> Dashboard</a>
+</li>
+<li>
+<a><i class="fas fa-fw fa-book menu-icon"></i> Customers</a>
+</li>
+</ul>
+
+<span class="sidebar-divider"></span>
+
+<p class="menu-label">
+Administration
+</p>
+
+<ul class="menu-list">
+<li><a>Team Settings</a></li>
+<li><a>Invitations</a></li>
+<li><a>Authentication</a></li>
+</ul>
+
+<span class="sidebar-divider"></span>
+
+<p class="menu-label">
+Transactions
+</p>
+
+<ul class="menu-list">
+<li><a>Payments</a></li>
+<li><a>Transfers</a></li>
+<li><a>Balance</a></li>
+</ul>
+
+</div>
+
+</div><!-- end sidebar-body -->
+
+<div class="sidebar-footer">
+<h3 class="title">Footer</h3>
+</div>
+
+</div>
+</div><!-- end sidebar -->
+
+<section id="intro" class="parallax-block intro">
+
+<div class="columns">
+<div class="column">
+
+<div class="parallax-body">
+<h1 class="is-size-1 is-size-2-mobile"> Nublado </h1>
+
+<h2 class="is-size-3 is-size-4-mobile">
+A tool for jotting down context-based vocabulary
+</h2>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+<div class="icon-blocks">
+
+<h2 class="icon-blocks-header">Nublado at a glance</h2>
+
+<div class="columns">
+
+<div class="column is-6 icon-block">
+
+<header class="icon-block-header">
+<i class="fas fa-language icon-block-icon"></i>
+<h3>Vocabulary</h3>
+</header>
+
+<p>
+Create context-based vocabulary from different types of sources.
+</p>
+
+</div>
+
+<div class="column is-6 icon-block">
+
+<i class="fab fa-python icon-block-icon"></i>
+
+<header class="icon-block-header">
+<h3># cool.py</h3>
+</header>
+
+<p>
+This project is developed with Django.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div><!-- end app-container -->
+
+<script>
+var sidebarExpanded = false;
+</script>
+
+<script src="js/axios.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/vue/plugins/modal.js"></script>
+<script src="js/vue/core-components.js"></script>
+<script src="js/vue/app-components.js"></script>
+<script src="js/vue/reading-components.js"></script>
+<script src="js/vue/dbx-components.js"></script>
+<script src="js/vue/directives/vue-scrollto.js"></script>
+<script src="js/vue/app.js"></script>
+
+</body>
+</html>

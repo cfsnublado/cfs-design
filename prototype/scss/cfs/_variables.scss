@@ -1,0 +1,157 @@
+// PARALLAX
+$parallax-intro-img: '../images/jumbo_bg.png';
+
+// PAGINATION
+
+$pagination-color-1: #2E4057; // Pickled Bluewood
+$pagination-color-2: #64a281; // Aqua Forest
+$pagination-color-3: #fff; // White
+
+$pagination-font: "oxygen";
+
+$pagination-border-radius: .25em;
+
+// LAYOUT
+$main-content-padding-top-px: 40px;
+$main-content-padding-top: rem-calc($main-content-padding-top-px);
+
+// COLORS
+
+$cloudy: #f9f9f9;
+
+// NAVBAR
+$navbar-border-color: #eee;
+$navbar-background-color: $cloudy !default;
+$navbar-box-shadow-size: 0 2px 0 0 !default;
+$navbar-box-shadow-color: $background !default;
+$navbar-height-px: 50px !default;
+$navbar-height: rem-calc($navbar-height-px);
+$navbar-padding-vertical: 1rem !default;
+$navbar-padding-horizontal: 2rem !default;
+$navbar-z: 30 !default;
+$navbar-fixed-z: 30 !default;
+$navbar-item-color: $grey-dark !default;
+$navbar-item-hover-color: $link !default;
+$navbar-item-hover-background-color: $white-bis !default;
+$navbar-item-active-color: $black !default;
+$navbar-item-active-background-color: transparent !default;
+$navbar-item-img-max-height: rem-calc($navbar-height-px - 10px) !default;
+$navbar-burger-color: $navbar-item-color !default;
+$navbar-trigger-color: $navbar-item-color !default;
+$navbar-trigger-font-size-px: 20px;
+$navbar-trigger-font-size: rem-calc($navbar-trigger-font-size-px);
+$navbar-tab-hover-background-color: transparent !default;
+$navbar-tab-hover-border-bottom-color: $link !default;
+$navbar-tab-active-color: $link !default;
+$navbar-tab-active-background-color: transparent !default;
+$navbar-tab-active-border-bottom-color: $link !default;
+$navbar-tab-active-border-bottom-style: solid !default;
+$navbar-tab-active-border-bottom-width: 3px !default;
+$navbar-dropdown-background-color: $white !default;
+$navbar-dropdown-border-top: 2px solid $border !default;
+$navbar-dropdown-offset: -4px !default;
+$navbar-dropdown-arrow: $link !default;
+$navbar-dropdown-radius: $radius-large !default;
+$navbar-dropdown-z: 20 !default;
+$navbar-dropdown-boxed-radius: $radius-large !default;
+$navbar-dropdown-boxed-shadow: 0 8px 8px rgba($black, 0.1),
+0 0 0 1px rgba($black, 0.1) !default;
+$navbar-dropdown-item-hover-color: $black !default;
+$navbar-dropdown-item-hover-background-color: rgba(91, 164, 229, 0.15) !default;
+$navbar-dropdown-item-active-color: $link !default;
+$navbar-dropdown-item-active-background-color: $background !default;
+$navbar-divider-background-color: $background !default;
+$navbar-divider-height: 2px !default;
+$navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
+$navbar-breakpoint: $tablet !default;
+
+// SIDEBAR
+$sidebar-background-background-color: rgba($black, 0.6) !default;
+$sidebar-background-color: #f5f7f8;
+$sidebar-border-color: #dfe1e3;
+$sidebar-trans-duration: 0.3s;
+
+$sidebar-z-index: $modal-z - 50;
+
+$sidebar-menu-item-color: #6a6a6a;
+
+$sidebar-width-px: 250px;
+$sidebar-width: rem-calc($sidebar-width-px);
+
+$sidebar-padding-left-px: 16px;
+$sidebar-padding-left: rem-calc($sidebar-padding-left-px);
+$sidebar-padding-right-px: 10px;
+$sidebar-padding-right: rem-calc($sidebar-padding-right-px);
+
+$sidebar-body-padding-top-px: 20px;
+$sidebar-body-padding-top: rem-calc($sidebar-body-padding-top-px);
+
+$sidebar-body-padding-bottom-px: 20px;
+$sidebar-body-padding-bottom: rem-calc($sidebar-body-padding-bottom-px);
+
+$sidebar-header-height-px: 50px;
+$sidebar-header-height: rem-calc($sidebar-header-height-px);
+
+$sidebar-footer-height-px: 50px;
+$sidebar-footer-height: rem-calc($sidebar-footer-height-px);
+
+$sidebar-menu-item-font-size-px: 16px;
+$sidebar-menu-item-font-size: rem-calc($sidebar-menu-item-font-size-px);
+
+$sidebar-menu-icon-font-size-px: 16px;
+$sidebar-menu-icon-font-size: rem-calc($sidebar-menu-icon-font-size-px);
+
+$sidebar-menu-header-font-size-px: 18px;
+$sidebar-menu-header-font-size: rem-calc($sidebar-menu-header-font-size-px);
+
+$sidebar-menu-icon-padding-right-px: 36px;
+$sidebar-menu-icon-padding-right: rem-calc($sidebar-menu-icon-padding-right-px);
+
+// Footer
+$page-footer-height-px: $navbar-height-px;
+$page-footer-height: rem-calc($page-footer-height-px);
+$page-footer-background-color: #444;
+$page-footer-border-color: #dfe1e3;
+$page-footer-text-color: #eee;
+
+// Notification
+$msg-notification-z-index: 1000;
+
+// States
+$spacer-y: 1rem !default;
+$state-success-text: #3c763d !default;
+$state-success-bg: #dff0d8 !default;
+$state-success-border: darken($state-success-bg, 5%) !default;
+$state-info-text: #31708f !default;
+$state-info-bg: #d9edf7 !default;
+$state-info-border: darken($state-info-bg, 7%) !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+$state-warning-border: darken($state-warning-bg, 5%) !default;
+$state-danger-text: #a94442 !default;
+$state-danger-bg: #f2dede !default;
+$state-danger-border: darken($state-danger-bg, 5%) !default;
+
+// Alert
+$alert-padding: rem-calc(15px) !default;
+$alert-border-radius: .25rem !default;
+$alert-link-font-weight: bold !default;
+$alert-border-width: 1px !default;
+$alert-success-bg: $state-success-bg !default;
+$alert-success-text: $state-success-text !default;
+$alert-success-border: $state-success-border !default;
+$alert-info-bg: $state-info-bg !default;
+$alert-info-text: $state-info-text !default;
+$alert-info-border: $state-info-border !default;
+$alert-warning-bg: $state-warning-bg !default;
+$alert-warning-text: $state-warning-text !default;
+$alert-warning-border: $state-warning-border !default;
+$alert-danger-bg: $state-danger-bg !default;
+$alert-danger-text: $state-danger-text !default;
+$alert-danger-border: $state-danger-border !default;
+$close-font-weight: bold !default;
+$close-color: #000 !default;
+$close-text-shadow: 0 1px 0 #fff !default;
+
+// Overlays
+$background-overlay-z-index: $sidebar-z-index - 20;

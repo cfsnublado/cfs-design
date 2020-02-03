@@ -1,0 +1,212 @@
+$highlighted-text-color: #e0eee8;
+
+.vocab-source-box {
+  margin-bottom: rem-calc(30px);
+
+  text-align: center;
+
+  .name {
+    font-size: rem-calc(22px);
+
+    margin-bottom: rem-calc(20px);
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .desc {
+  }
+
+  .box-content {
+    padding-right: rem-calc(16px);
+    padding-left: rem-calc(16px);
+  }
+}
+
+
+.vocab-context-box {
+  .vocab-context-text {
+    font-size: rem-calc(20px);
+  }
+
+  .vocab-entries {
+    font-size: rem-calc(13px);
+
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+}
+
+.vocab-source-box,
+.vocab-context-box {
+  .box-controls {
+    display: flex;
+
+    justify-content: flex-end;
+
+    .control {
+      padding-left: rem-calc(4px);
+
+      a {
+        font-size: rem-calc(18px);
+
+        color: rgba(10, 10, 10, 0.2);
+
+        &:hover {
+          color: rgba(10, 10, 10, 0.3);
+        }
+      }
+    }
+  }
+}
+
+
+.entry-header {
+  font-size: rem-calc(60px);
+}
+
+.vocab-entry-info ul {
+  list-style: none;
+}
+
+.vocab-entry-info {
+  margin-top: 10px;
+}
+
+.vocab-definitions {
+  margin-top: 10px;
+}
+
+.vocab-definition-text {
+  font-size: rem-calc(16px);
+
+  margin-left: 10px;
+}
+
+.vocab-lexical-category {
+  font-size: rem-calc(18px);
+
+  color: #4183c4;
+}
+
+.vocab-pronunciation {
+  font-size: rem-calc(18px);
+
+  color: #4a4a4a;
+}
+
+.vocab-pronunciation-icon {
+  font-size: rem-calc(16px);
+
+  color: #979797;
+}
+
+.vocab-pronunciation p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.vocab-entry-tag-group {
+  margin-top: rem-calc(10px);
+  margin-bottom: rem-calc(10px);
+}
+
+.untagged-context-text {
+  display: none;
+}
+
+.vocab-context-text {
+  .tagged-text {
+    padding: 5px 0;
+
+    background-color: $highlighted-text-color;
+  }
+}
+
+.vocab-context-entries {
+  .vocab-context {
+    padding-top: 1rem;
+  }
+
+  .vocab-context-text {
+    font-size: rem-calc(18px);
+  }
+
+  .vocab-source-title {
+    font-size: rem-calc(14px);
+    font-style: italic;
+
+    margin-bottom: rem-calc(6px);
+
+    color: #888;
+  }
+}
+
+.vocab-list {
+  margin-left: 0;
+
+  list-style: none;
+}
+
+.vocab-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.vocab-list li a {
+  color: #777;
+}
+
+.vocab-list li a:hover {
+  color: #222;
+}
+
+.language-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.entry-list li {
+  display: inline-block;
+
+  font-size: 14px;
+
+  padding-right: 5px;
+}
+
+.entry-list a {
+  color: #555;
+}
+
+.entry-list li a:hover {
+  color: #000;
+}
+
+.context-list .context-list-item {
+  font-size: 14px;
+
+  margin: 0 -20px;
+  padding: 0 20px 0 20px;
+}
+
+.context-list .context-list-item a {
+  color: #555;
+}
+
+.context-list .context-list-item a:hover {
+  color: #000;
+}
+
+.context-list .context-list-item.bordered {
+  padding-top: 1rem;
+
+  border-top: 1px solid #eee;
+}
+
+@include until($tablet) {
+  .entry-header {
+    font-size: rem-calc(40px);
+  }
+}
